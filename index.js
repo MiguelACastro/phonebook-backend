@@ -10,6 +10,7 @@ morgan.token('body', function (req, res) {
 morgan.format('data', morgan['tiny'] + ' :body')
 
 app.use(express.json())
+app.use(express.static('dist'))
 app.use(morgan('data'))
 
 let persons = [
